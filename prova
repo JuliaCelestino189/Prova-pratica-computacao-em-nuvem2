@@ -19,7 +19,7 @@ root@controlplane:~$ ^C
 root@controlplane:~$ curl https://localhost:8090
 curl: (7) Failed to connect to localhost port 8090 after 0 ms: Couldn't connect to server
 root@controlplane:~$                            
-docker run -d --name sato -p 8090:80 nginx:alpine
+docker run -d --name julia -p 8090:80 nginx:alpine
 Unable to find image 'nginx:alpine' locally
 alpine: Pulling from library/nginx
 881fc932939e: Pull complete 
@@ -35,7 +35,7 @@ Status: Downloaded newer image for nginx:alpine
 e59f8a272e5bfddd5e9fc44bfda46b0d356a40faed075491d33f696faa227561
 root@controlplane:~$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                     NAMES
-e59f8a272e5b   nginx:alpine   "/docker-entrypoint.…"   19 seconds ago   Up 18 seconds   0.0.0.0:8090->80/tcp, [::]:8090->80/tcp   sato
+e59f8a272e5b   nginx:alpine   "/docker-entrypoint.…"   19 seconds ago   Up 18 seconds   0.0.0.0:8090->80/tcp, [::]:8090->80/tcp   julia
 root@controlplane:~$ curl https://localhost:8090
 curl: (35) OpenSSL/3.0.13: error:0A00010B:SSL routines::wrong version number
 root@controlplane:~$ curl https://localhost:8090
