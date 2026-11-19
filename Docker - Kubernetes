@@ -62,7 +62,6 @@ root@ubuntu:~$ curl http://localhost:8090
 
 
 Terminal Kubernetes: 
-
 root@controlplane:~$ kubectl create deployment comunicado --image=nginx:alpine 
 deployment.apps/comunicado created
 
